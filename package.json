@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/acdodd17/Team_Profile#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "bootstrap-icons": "^1.7.2",
     "inquirer": "^8.2.0"
   }
 }

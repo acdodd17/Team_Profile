@@ -7,8 +7,8 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 //require fs and createPage to create HTML for team profile page
-// const fs = require('fs');
-// const generatePage = require('./src/generatePage');
+const fs = require('fs');
+const generatePage = require('./src/generatePage');
 
 //create team array to store new employee objects 
 const team = [];
@@ -61,33 +61,39 @@ const menu = () => {
             type: 'confirm', 
             name: 'addEmployee',
             message: 'Do you want to add another employee to your team?',
+        } 
+    )
+    .then (answer => {
+        if (answer.addEmployee === true) {
+            console.log('Adding new employee!')
+            newEmployee();
+        } else {
+            console.log('Creating team profile!')
+            createTeam();
+        }
+    }) 
+};
+
+const newEmployee = () => {
+    return inquirer.prompt(
+        {
+            type: 'list',
+            name: 'employeeType',
+            message: "Which type of employee would you like to add?",
+            choices: ['Engineer', 'Intern', 'Go back']
         }
     )
-    .then(response => {
-        if(response.confirm) {
-            inquirer.prompt(
-                {
-                    type: 'list',
-                    name: 'employeeType',
-                    message: "Which type of employee would you like to add?",
-                    choices: ['Engineer', 'Intern', 'Go back']
-                }
-            )
-            .then(response => {
-                if (response.employeeType === 'Engineer') {
-                    createEngineer();
-                } 
-                else if(response.employeeType === 'Intern') {
-                    createIntern();
-                } else {
-                    menu();
-                }
-            });
+    .then (response => {
+        if (response.employeeType === 'Engineer') {
+            createEngineer();
+        } 
+        else if(response.employeeType === 'Intern') {
+            createIntern();
         } else {
-            createTeam();
-        };
+            menu();
+        }
     });
-};
+}
 
 const createEngineer = () => {
     return inquirer.prompt([
@@ -173,14 +179,14 @@ const createIntern = () => {
 
 const createTeam = () => {
     console.log("New team created!");
-    // const teamProfile = generatePage(team);
-
-    // fs.writeFile('./dist/index.html', teamProfile, err => {
-    //     if(err) {
-    //         console.log(err);
-    //         return;
-    //     }
-    // })
+    const teamProfile = generatePage(team);
+    //write team data to index.html file
+    fs.writeFile('./dist/index.html', teamProfile, err => {
+        if(err) {
+            console.log(err);
+            return;
+        }
+    })
 };
 
 createManager();
