@@ -14,8 +14,8 @@ const generateTeam = team => {
                         </div>
                         <div class="card-body bg-light">
                             <ul class="list-group list-group-flush ">
-                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">ID: <span class="fw-normal">${id}</span> </li>
-                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">Email: <span class="fw-normal">${email}</span></li>
+                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">ID: <span class="fw-normal">${id}</span></li>
+                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">Email: <a href="mailto:${email}" class="fw-normal">${email}</a></li>
                                 <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">Office#: <span class="fw-normal">${officeNumber}</span></li>
                             </ul>
                         </div>
@@ -32,13 +32,13 @@ const generateTeam = team => {
                     <div class="card shadow-sm mb-5" style="width: 18rem;">
                         <div class="card-header bg-primary">
                             <h4 class="card-title text-white">${name}</h4>
-                            <h5 class="card-subtitle text-white"><i class="bi bi-cup"></i> Engineer</h5>
+                            <h5 class="card-subtitle text-white"><i class="bi bi-eyeglasses"></i> Engineer</h5>
                         </div>
                         <div class="card-body bg-light">
                             <ul class="list-group list-group-flush ">
-                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">ID: <span class="fw-normal">${id}</span> </li>
-                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">Email: <span class="fw-normal">${email}</span></li>
-                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">GitHub: <span class="fw-normal">${github}</span></li>
+                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">ID: <span class="fw-normal">${id}</span></li>
+                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">Email: <a href="mailto:${email}" class="fw-normal">${email}</a></li>
+                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">GitHub: <a href="github.com/${github}" class="fw-normal">${github}</span></li>
                             </ul>
                         </div>
                     </div>
@@ -58,8 +58,8 @@ const generateTeam = team => {
                         </div>
                         <div class="card-body bg-light">
                             <ul class="list-group list-group-flush ">
-                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">ID: <span class="fw-normal">${id}</span> </li>
-                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">Email: <span class="fw-normal">${email}</span></li>
+                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">ID: <span class="fw-normal">${id}<span></li>
+                                <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">Email: <a href="mailto:${email}" class="fw-normal">${email}</a></li>
                                 <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">School: <span class="fw-normal">${school}</span></li>
                             </ul>
                         </div>
