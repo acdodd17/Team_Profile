@@ -21,7 +21,7 @@ const createManager = () => {
             name: 'name',
             message: "What is the team manager's name?", 
             validate: value => {
-                if (value) {
+                if (typeof value === 'string') {
                     return true;
                 } else {
                     console.log('Please enter a valid name!');
@@ -64,7 +64,7 @@ const menu = () => {
         } 
     )
     .then (answer => {
-        if (answer.addEmployee === true) {
+        if (answer.addEmployee) {
             console.log('Adding new employee!')
             newEmployee();
         } else {
