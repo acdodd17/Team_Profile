@@ -3,13 +3,23 @@ const Employee = require('../lib/Employee');
 
 test('creates an employee object', () => {
     //mock employee data
-    const employee = new Employee('Anna', 1734, 'acdodd17@gmail.com');
+    const employee = new Employee('Penny', '1734', 'p3np13@gmail.com');
 
-    expect(employee.name).toBe('Anna');
-    expect(employee.id).toBe(1734);
-    expect(employee.email).toBe('acdodd17@gmail.com');
+    expect(employee.name).toBe('Penny');
+    expect(employee.id).toBe('1734');
+    expect(employee.email).toBe('p3np13@gmail.com');
 });
 
-test('gets employee name', () => {
-    expect(employee.getName()).toBe('Anna');
-})
+test('gets employee attributes', () => {
+    //mock employee data
+    const employee = new Employee('Penny', '1734', 'p3np13@gmail.com');
+
+    expect(employee.getName()).toBe('Penny'); 
+    expect(employee.getId()).toBe('1734');
+    expect(employee.getEmail()).toBe('p3np13@gmail.com');
+    expect(employee.getRole()).toBe('Employee');
+});
+
+
+    
+   
