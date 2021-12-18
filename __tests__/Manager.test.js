@@ -1,4 +1,4 @@
-const Manager = require('../lib/Engineer');
+const Manager = require('../lib/Manager');
 
 test('creates a Manager object', () => {
     //mock manager data
@@ -7,7 +7,7 @@ test('creates a Manager object', () => {
     expect(manager.name).toBe('Penny');
     expect(manager.id).toBe('1734');
     expect(manager.email).toBe('p3np13@gmail.com');
-    expect(manager.officeNumber).toBe('101'); //not working 
+    expect(manager.officeNumber).toBe('101'); 
 });
 
 test('gets manager attributes', () => {
@@ -17,6 +17,6 @@ test('gets manager attributes', () => {
     expect(manager.getName()).toBe('Penny'); 
     expect(manager.getId()).toBe('1734');
     expect(manager.getEmail()).toBe('p3np13@gmail.com');
-    expect(manager.getOffice()).toBe('101'); //not working 
+    expect(manager.getOffice()).toBe('101'); 
     expect(manager.getRole()).toBe('Manager');
 });

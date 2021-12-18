@@ -1,4 +1,4 @@
-const Intern = require('../lib/Engineer');
+const Intern = require('../lib/Intern');
 
 test('creates an intern object', () => {
     //mock intern data
@@ -7,7 +7,7 @@ test('creates an intern object', () => {
     expect(intern.name).toBe('Penny');
     expect(intern.id).toBe('1734');
     expect(intern.email).toBe('p3np13@gmail.com');
-    expect(intern.school).toBe('UNC'); //not working 
+    expect(intern.school).toBe('UNC');
 });
 
 test('gets intern attributes', () => {
@@ -17,6 +17,6 @@ test('gets intern attributes', () => {
     expect(intern.getName()).toBe('Penny'); 
     expect(intern.getId()).toBe('1734');
     expect(intern.getEmail()).toBe('p3np13@gmail.com');
-    expect(intern.getSchool()).toBe('UNC'); //not working 
+    expect(intern.getSchool()).toBe('UNC')
     expect(intern.getRole()).toBe('Intern');
 });
