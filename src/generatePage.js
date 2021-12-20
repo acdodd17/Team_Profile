@@ -1,5 +1,5 @@
 
-// generate page with divs to hold each employee card 
+// generate page with divs to hold each type of employee card 
 const generatePage = team => {
     return `
     <!DOCTYPE html>
@@ -54,7 +54,7 @@ const generatePage = team => {
                                         <ul class="list-group list-group-flush ">
                                             <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">ID: <span class="fw-normal">${id}</span></li>
                                             <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">Email: <a href="mailto:${email}" class="fw-normal">${email}</a></li>
-                                            <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">GitHub: <a href="github.com/${github}" class="fw-normal">${github}</span></li>
+                                            <li class="list-group-item border border-light rounded shadow-sm mb-2 fw-bold">GitHub: <a href="github.com/${github}" class="fw-normal">${github}</a></li>
                                         </ul>
                                     </div>
                                 </div>
