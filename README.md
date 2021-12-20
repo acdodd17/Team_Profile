@@ -20,6 +20,8 @@ SO THAT I have quick access to their emails and GitHub profiles`
 After runing `node index.js` in the command line to initialize the application, answer all prompts to generate a new index.html file for your project. You will find your new team profile written to the index.html file in the 'dist' folder.
 
 Example Team Profile:
+
+![Walk-thru](dist/Team-Profile-Generator.gif)
 ![Example Team](dist/Example-team.png)
 
 ## CONTRIBUTIONS
