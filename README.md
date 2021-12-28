@@ -21,8 +21,8 @@ After runing `node index.js` in the command line to initialize the application, 
 
 Example Team Profile:
 
-![Walk-thru](dist/Team-Profile-Generator.gif)
-![Example Team](dist/Example-team.png)
+![Walk-thru](/dist\Team-Profile-Generator.gif)
+![Example Team](/dist\Example-team.png)
 
 ## CONTRIBUTIONS
 Made with by ❤ [Anna Dodd](https://github.com/acdodd17)
